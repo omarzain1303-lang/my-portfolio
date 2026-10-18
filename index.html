@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Developer Portfolio | Micro1 Evaluation Ready</title>
+    <style>
+        :root { --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --accent: #38bdf8; --sub: #94a3b8; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { border-bottom: 2px solid #334155; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { margin: 0; color: var(--accent); font-size: 2.2rem; }
+        .subtitle { color: var(--sub); font-size: 1.1rem; margin-top: 5px; }
+        .links { margin-top: 15px; }
+        .links a { color: var(--accent); text-decoration: none; margin-right: 15px; font-weight: bold; border: 1px solid var(--accent); padding: 5px 12px; border-radius: 4px; }
+        .section { background: var(--card); padding: 25px; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3); }
+        h2 { color: var(--accent); border-bottom: 1px solid #334155; padding-bottom: 8px; margin-top: 0; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .project-card { border-left: 4px solid var(--accent); padding-left: 15px; margin-bottom: 20px; }
+        .tag { background: #334155; color: #e2e8f0; padding: 2px 8px; border-radius: 4px; font-size: 0.85rem; margin-right: 5px; }
+        code { background: #0f172a; padding: 2px 6px; border-radius: 4px; color: #f43f5e; font-family: monospace; }
+        blockquote { background: #0f172a; border-left: 3px solid #f59e0b; padding: 10px 15px; margin: 10px 0; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>[Aapka Naam]</h1>
+            <div class="subtitle">Game Developer & Gameplay Systems Specialist</div>
+            <p>📍 India | 📧 your.email@example.com</p>
+            <div class="links">
+                <a href="https://github.com" target="_blank">GitHub Profile</a>
+                <a href="https://itch.io" target="_blank">Itch.io Games</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+        </header>
+
+        <div class="section">
+            <h2>🎯 Micro1 Alignment & Executive Summary</h2>
+            <p>Experienced Game Developer specializing in multi-system gameplay mechanics, C#/C++ state machine architectures, and engine-level debugging in <strong>Unity</strong> and <strong>Unreal Engine 5</strong>. Proficient in creating reproducible bug test-cases, writing structured technical briefs, and defining verifiable in-game state logs for AI agent training environments.</p>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Technical Engine & Debugging Skills</h2>
+            <div class="skills-grid">
+                <div>
+                    <strong>Game Engines</strong><br>
+                    <span class="tag">Unity (C#)</span> <span class="tag">Unreal Engine 5 (C++)</span> <span class="tag">Godot</span>
+                </div>
+                <div>
+                    <strong>Core Systems</strong><br>
+                    <span class="tag">Finite State Machines</span> <span class="tag">NavMesh AI</span> <span class="tag">Raycast Controllers</span>
+                </div>
+                <div>
+                    <strong>QA & Debugging</strong><br>
+                    <span class="tag">Memory Profiling</span> <span class="tag">Assertion Logs</span> <span class="tag">Bug Reproduction</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎮 Technical Projects & Source Code</h2>
+            
+            <div class="project-card">
+                <h3>1. Tactical Combat & State Machine Framework</h3>
+                <p><span class="tag">Unity</span> <span class="tag">C#</span> <span class="tag">Git</span></p>
+                <p>Designed a modular 3D melee controller using decoupled event-driven finite state machines (FSM). Integrated stamina triggers, weapon hitboxes, and animation root motion vector calculations.</p>
+                <p><strong>Links:</strong> <a href="#" style="color:var(--accent)">Source Code (GitHub)</a> | <a href="#" style="color:var(--accent)">Playable Build (Itch.io)</a></p>
+            </div>
+
+            <div class="project-card">
+                <h3>2. Inventory & Procedural Interaction System</h3>
+                <p><span class="tag">Unreal Engine 5</span> <span class="tag">C++</span> <span class="tag">Blueprints</span></p>
+                <p>Developed an integrated data-driven C++ inventory system bound directly to UI Delegates, featuring physics-driven item interaction and real-time NavMesh updates.</p>
+                <p><strong>Links:</strong> <a href="#" style="color:var(--accent)">Source Code (GitHub)</a> | <a href="#" style="color:var(--accent)">Demo Video</a></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📝 Sample AI Training Task Brief (Bug & Feature Challenge)</h2>
+            <p><em>Demonstrating capability to author Producer-style task instructions for AI evaluation:</em></p>
+            <blockquote>
+                <strong>Task Title:</strong> Wall-Run Controller Infinite State Deadlock<br>
+                <strong>Engine Context:</strong> Unity Character Physics Controller<br><br>
+                <strong>Bug Scenario:</strong> The player character enters a wall-run state upon raycast detection but fails to detach when hitting dynamic dynamic obstacle tags, trapping the velocity vector.<br><br>
+                <strong>Acceptance Criteria & Verification:</strong>
+                <ul>
+                    <li>Identify missing tag filter check in <code>WallRunSweep()</code> method.</li>
+                    <li>Verify character transitions to <code>FallState</code> within 0.05 seconds of obstacle impact.</li>
+                    <li>Assertion check: <code>IsWallRunning == false</code> and <code>GravityScale == 1.0f</code>.</li>
+                </ul>
+            </blockquote>
+        </div>
+    </div>
+</body>
+</html>
