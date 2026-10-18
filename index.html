@@ -25,13 +25,12 @@
 <body>
     <div class="container">
         <header>
-            <h1>[Aapka Naam]</h1>
+            <h1>Omar Zain</h1>
             <div class="subtitle">Game Developer & Gameplay Systems Specialist</div>
-            <p>📍 India | 📧 your.email@example.com</p>
+            <p>📍 India | 📧 omarzain1303@gmail.com</p>
             <div class="links">
-                <a href="https://github.com" target="_blank">GitHub Profile</a>
-                <a href="https://itch.io" target="_blank">Itch.io Games</a>
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://github.com/omarzain1303-lang" target="_blank">GitHub Profile</a>
+                <a href="https://github.com/omarzain1303-lang/tactical-combat-fsm" target="_blank">Code Repository</a>
             </div>
         </header>
 
@@ -65,14 +64,7 @@
                 <h3>1. Tactical Combat & State Machine Framework</h3>
                 <p><span class="tag">Unity</span> <span class="tag">C#</span> <span class="tag">Git</span></p>
                 <p>Designed a modular 3D melee controller using decoupled event-driven finite state machines (FSM). Integrated stamina triggers, weapon hitboxes, and animation root motion vector calculations.</p>
-                <p><strong>Links:</strong> <a href="#" style="color:var(--accent)">Source Code (GitHub)</a> | <a href="#" style="color:var(--accent)">Playable Build (Itch.io)</a></p>
-            </div>
-
-            <div class="project-card">
-                <h3>2. Inventory & Procedural Interaction System</h3>
-                <p><span class="tag">Unreal Engine 5</span> <span class="tag">C++</span> <span class="tag">Blueprints</span></p>
-                <p>Developed an integrated data-driven C++ inventory system bound directly to UI Delegates, featuring physics-driven item interaction and real-time NavMesh updates.</p>
-                <p><strong>Links:</strong> <a href="#" style="color:var(--accent)">Source Code (GitHub)</a> | <a href="#" style="color:var(--accent)">Demo Video</a></p>
+                <p><strong>Links:</strong> <a href="https://github.com/omarzain1303-lang/tactical-combat-fsm" target="_blank" style="color:var(--accent)">Source Code (GitHub Repository)</a></p>
             </div>
         </div>
 
@@ -82,12 +74,12 @@
             <blockquote>
                 <strong>Task Title:</strong> Wall-Run Controller Infinite State Deadlock<br>
                 <strong>Engine Context:</strong> Unity Character Physics Controller<br><br>
-                <strong>Bug Scenario:</strong> The player character enters a wall-run state upon raycast detection but fails to detach when hitting dynamic dynamic obstacle tags, trapping the velocity vector.<br><br>
+                <strong>Bug Scenario:</strong> The player character enters a wall-run state upon raycast detection but fails to detach when hitting dynamic obstacle tags, trapping the velocity vector.<br><br>
                 <strong>Acceptance Criteria & Verification:</strong>
                 <ul>
-                    <li>Identify missing tag filter check in <code>WallRunSweep()</code> method.</li>
-                    <li>Verify character transitions to <code>FallState</code> within 0.05 seconds of obstacle impact.</li>
-                    <li>Assertion check: <code>IsWallRunning == false</code> and <code>GravityScale == 1.0f</code>.</li>
+                    <li>Identify missing tag filter check in <code>OnCollisionEnter</code> method.</li>
+                    <li>Verify character transitions to <code>DetachFromWall()</code> state within 0.05 seconds of obstacle impact.</li>
+                    <li>Assertion check: <code>IsWallRunning == false</code> and <code>gravityScale == 1.0f</code>.</li>
                 </ul>
             </blockquote>
         </div>
